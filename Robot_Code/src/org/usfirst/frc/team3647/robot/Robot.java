@@ -30,6 +30,8 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void robotInit() 
 	{
+		server = CameraServer.getInstance();
+		server.startAutomaticCapture("cam0", 0);
 		try
 		{
 			CrashChecker.logRobotInit();
